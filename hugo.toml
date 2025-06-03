@@ -1,0 +1,8 @@
+baseURL = 'https://ruixi.top/'
+languageCode = 'zh-CN'
+title = "Ruixi's BLog"
+theme = 'PaperMod'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
