@@ -1,8 +1,97 @@
 baseURL = 'https://ruixi.top/'
 languageCode = 'zh-CN'
-title = "Ruixi's BLog"
+title = "Ruixi's Blog"
 theme = 'PaperMod'
+
+enableInlineShortcodes = true # 是否启用内联 shortcode
+enableEmoji = true # 是否启用 Emoji 表情支持
+enableRobotsTXT = true # 是否生成 robots.txt 文件
+buildDrafts = false # 是否构建草稿
+buildFuture = false # 是否构建未来发布的内容
+buildExpired = false # 是否构建已过期的内容
+defaultContentLanguage = "zh" # 顶部首先展示的语言界面
+defaultContentLanguageInSubdir = false # 是否要在地址栏加上默认的语言代码
 
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# 导航菜单配置
+[menu]
+  [[menu.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "归档"
+    pageRef = "/archives/"
+    weight = 2
+  [[menu.main]]
+    name = "标签"
+    pageRef = "/tags/"
+    weight = 3
+  [[menu.main]]
+    name = "搜索"
+    pageRef = "/search/"
+    weight = 4
+  [[menu.main]]
+    name = "关于"
+    pageRef = "/about/"
+    weight = 5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+
+[params]
+  title = "Ruixi's Blog"
+  author = "Ruixi"
+  math = true
+  #showtoc = true
+  #hideSummary = true
+  defaultTheme = "dark" # 默认是暗色背景
+  ShowPostNavLinks = true # 显示文章导航链接
+  ShowWordCount = true # 显示文章字数统计
+  ShowBreadCrumbs = true # 显示面包屑导航
+  ShowCodeCopyButtons = true # 显示代码块复制按钮
+  ShowRssButtonInSectionTermList = true # RSS 相关
+  ShowAllPagesInArchive = true # 在归档页面展示所有的页面
+  disableScrollToTop = false # 启用返回顶部按钮
+  DateFormat = "2006/01/02"
+
+  [params.assets]
+    favicon = "favicon.png"
+    favicon16x16 = "favicon.png"
+    favicon32x32 = "favicon.png"
+
+  [params.homeInfoParams]
+    Title = "Hi there. 👋"
+    Content = "这里是 Ruixi 的小站。"
+
+  [params.fuseOpts]
+    isCaseSensitive = false # 是否大小写敏感
+    shouldSort = true # 是否排序
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 2
+    #limit = 20 # 限制返回的搜索结果数量 
+    keys = ["title", "permalink", "summary", "content"]
+    includeMatches = true
+
+  [[params.socialIcons]]
+    name = "github"
+    icon = "github"
+    url = "https://github.com/Ruixi-Cheng/"
+  [[params.socialIcons]]
+    name = "Bilibili"
+    title = "关注我的 B 站帐号"
+    url = "https://space.bilibili.com/"
