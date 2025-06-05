@@ -1,5 +1,5 @@
 +++
-title = "站内搜索"
+title = "Search"
 layout = "search"
 url = "/search/"
 +++
