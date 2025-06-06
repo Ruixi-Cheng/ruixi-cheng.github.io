@@ -1,5 +1,4 @@
-<head>
-  {{ if .Param "math" }}
-    {{ partialCached "math.html" . }}
-  {{ end }}
-</head>
+{{ if or .Params.math .Site.Params.math }}
+  {{ partial "math.html" . }}
+{{ end }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/nord.min.css"> 

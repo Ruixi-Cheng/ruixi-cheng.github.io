@@ -43,18 +43,13 @@ defaultContentLanguageInSubdir = false # 是否要在地址栏加上默认的语
     weight = 4
   [[menu.main]]
     name = "About"
-    titl1 = "About"
+    title = "About"
     pageRef = "/about/"
     weight = 5
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)'], ['$', '$']]
+  [markup.highlight]
+    codeFences = false
 
 [params]
   title = "Ruixi's Blog"
