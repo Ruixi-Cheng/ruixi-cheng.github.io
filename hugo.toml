@@ -42,10 +42,15 @@ defaultContentLanguageInSubdir = false # 是否要在地址栏加上默认的语
     pageRef = "/search/"
     weight = 4
   [[menu.main]]
+    name = "Friends"
+    title = "Friends"
+    pageRef = "/friends/"
+    weight = 5
+  [[menu.main]]
     name = "About"
     title = "About"
     pageRef = "/about/"
-    weight = 5
+    weight = 6
 
 [markup]
   [markup.highlight]
