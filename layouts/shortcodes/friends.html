@@ -3,27 +3,21 @@
         --link-count-per-row: 1;
     }
 
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: 640px) {
         .friends {
             --link-count-per-row: 2;
-        }
-    }
-
-    @media screen and (min-width: 768px) {
-        .friends {
-            --link-count-per-row: 3;
         }
     }
 
     .friends {
         display: grid;
         grid-template-columns: repeat(var(--link-count-per-row), 1fr);
-        grid-gap: 16px;
+        grid-gap: 20px;
     }
 
-    /* 空间占位 */
     .friend-skeleton {
-        height: 280px;
+        height: 100px;
+        /* 调整为合适的高度 */
         display: inline-block;
         position: relative;
     }
@@ -40,9 +34,11 @@
             0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;
         overflow: hidden;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
         align-items: center;
+        /* 垂直居中 */
+        padding: 16px;
+        background-color: var(--entry);
+        /* 可选背景色 */
     }
 
     .friend:hover {
@@ -53,30 +49,36 @@
 
     .friend-avatar {
         object-fit: cover;
-        width: 100%;
-        height: 180px;
-        margin: 0 !important;
-        border-radius: 0 !important;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        /* 圆形头像 */
+        margin-right: 16px;
+        /* 和文字之间留点空隙 */
+        flex-shrink: 0;
+        /* 防止被压缩 */
     }
+
     .friend-content {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         flex: 1;
-        width: 100%;
-        padding: 16px;
-        background: var(--entry);
-        transform: translate3d(0, 0, 0);
+        overflow: hidden;
     }
 
     .friend-name {
         font-size: 1.2rem;
         font-weight: bold;
-        transform: inherit;
+        margin-bottom: 4px;
     }
 
     .friend-description {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         color: var(--secondary);
-        transform: translate3d(0, 0, 0);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 </style>
 <div class="friends">
@@ -94,5 +96,3 @@
     </div>
     {{ end }}
 </div>
-<!-- style code by https://github.com/fissssssh -->
-<!-- view https://github.com/fissssssh/fissssssh.github.io for more detail -->
