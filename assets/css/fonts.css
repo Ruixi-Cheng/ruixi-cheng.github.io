@@ -1,0 +1,23 @@
+/* 自定义字体 */
+@font-face {
+    font-family: 'NotoSansSC';
+    src: url('/fonts/NotoSansSC-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'FiraCodeNerdFont';
+    src: url('/fonts/FiraCodeNerdFont-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'LXGWWenKai';
+    src: url('/fonts/LXGWWenKai-Regular.woff2') format('woff2');
+}
+
+/* 应用于整个网站 */
+body {
+    font-family: 'NotoSansSC', sans-serif !important;
+}
+code, pre {
+    font-family: 'FiraCodeNerdFont', monospace !important;
+}
