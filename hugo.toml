@@ -60,6 +60,7 @@ defaultContentLanguageInSubdir = false # 是否要在地址栏加上默认的语
   title = "Ruixi's Blog"
   author = "Ruixi"
   math = true
+  comments = true
   #showtoc = true
   hideSummary = false
   defaultTheme = "dark" # 默认是暗色背景

@@ -8,7 +8,7 @@ View [ruixi.top](https://ruixi.top/)
 - [x] 代码高亮（One Dark/Light）
 - [x] 友链
 - [x] 图片灯箱显示
-- [ ] 评论功能（也许）
+- [x] 评论功能（giscus）
 - [ ] i18n（也许）
 - [x] 更改字体（正文使用了 NotoSansSC，文件里预存了霞鹜文楷但并未使用。代码字体使用 FiraCode Nerd Font。）
 
