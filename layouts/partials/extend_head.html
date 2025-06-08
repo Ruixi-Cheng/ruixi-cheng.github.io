@@ -1,10 +1,6 @@
 {{ if or .Params.math .Site.Params.math }}
 {{ partial "math.html" . }}
 {{ end }}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/nord.min.css">
-
-{{ $style := resources.Get "css/fonts.css" | minify }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">
 
 <link rel="preload" href="{{ "fonts/FiraCodeNerdFont-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ "fonts/NotoSansSC-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>

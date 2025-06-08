@@ -5,7 +5,7 @@ View [ruixi.top](https://ruixi.top/)
 - [x] 关于 界面
 - [x] 数学公式（Katex）
 - [ ] 悬浮目录
-- [x] 代码高亮
+- [x] 代码高亮（One Dark/Light）
 - [x] 友链
 - [x] 图片灯箱显示
 - [ ] 评论功能（也许）
