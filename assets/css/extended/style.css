@@ -17,6 +17,10 @@
   word-break: break-all;
 }
 
+.post-content blockquote {
+  background: var(--code-bg) !important;
+}
+
 body.dark {
   .post-content code {
     margin: auto 4px;
@@ -35,5 +39,79 @@ body.dark {
     border-radius: var(--radius);
     overflow-x: auto;
     word-break: break-all;
+  }
+
+  .post-content blockquote {
+    background: var(--code-bg) !important;
+  }
+}
+
+table {
+  border-collapse: collapse;          /* 合并单元格边框 */
+  display: table;                     /* 默认显示为表格 */
+  margin-bottom: 1rem;                /* 下方留出间距 */
+  width: 100%;                        /* 宽度撑满容器 */
+  overflow-x: auto;                   /* 当表格太宽时可水平滚动 */
+  -webkit-overflow-scrolling: touch;  /* 在 iOS 上优化滚动体验 */
+
+  & thead th {
+    text-align: center;               /* 表头内容水平居中 */
+    vertical-align: middle;           /* 表头内容垂直居中 */
+    border-bottom: 2px solid var(--code-bg); /* 底部粗边框 */
+  }
+
+  & td,
+  & th {
+    text-align: center;               /* 单元格内容水平居中 */
+    vertical-align: middle;           /* 单元格内容垂直居中 */
+    border-top: 1px solid var(--code-bg);   /* 上边框 */
+    border-bottom: 1px solid var(--code-bg); /* 下边框 */
+  }
+
+  & tbody tr:hover {
+    background-color: var(--code-bg); /* 鼠标悬停时行变色 */
+  }
+
+  & tbody tr:nth-of-type(2n + 1) {
+    background-color: var(--code-bg); /* 奇数行设置背景色（斑马纹） */
+  }
+
+  & tr:last-of-type {
+    border-bottom: 2px solid var(--code-bg); /* 最后一行底部加粗边框 */
+  }
+}
+
+.dark table {
+  border-collapse: collapse;
+  display: table;
+  margin-bottom: 1rem;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  & thead th {
+    text-align: center;              /* 水平居中 */
+    vertical-align: middle;          /* 垂直居中 */
+    border-bottom: 2px solid var(--code-bg);
+  }
+
+  & td,
+  & th {
+    text-align: center;              /* 所有单元格内容水平居中 */
+    vertical-align: middle;          /* 所有单元格内容垂直居中 */
+    border-top: 1px solid var(--code-bg);
+    border-bottom: 1px solid var(--code-bg);
+  }
+
+  & tbody tr:hover {
+    background-color: var(--code-bg);
+  }
+
+  & tbody tr:nth-of-type(2n + 1) {
+    background-color: var(--code-bg);
+  }
+
+  & tr:last-of-type {
+    border-bottom: 2px solid var(--code-bg);
   }
 }

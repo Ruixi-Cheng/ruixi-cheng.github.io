@@ -1,0 +1,37 @@
+.copy-code {
+    display: none;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: var(--nord3);
+    background: var(--nord4);
+    border-radius: var(--radius);
+    padding: 0 5px;
+    font-size: 14px;
+    user-select: none;
+}
+
+div.highlight:hover .copy-code,
+pre:hover .copy-code {
+    display: block;
+}
+
+body.dark {
+    .copy-code {
+        display: none;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        color: var(--nord6);
+        background: var(--nord1);
+        border-radius: var(--radius);
+        padding: 0 5px;
+        font-size: 14px;
+        user-select: none;
+    }
+
+    div.highlight:hover .copy-code,
+    pre:hover .copy-code {
+        display: block;
+    }
+}

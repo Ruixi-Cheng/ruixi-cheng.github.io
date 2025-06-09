@@ -1,0 +1,51 @@
+:root {
+    --gap: 24px;
+    --content-gap: 20px;
+    --nav-width: 1024px;
+    --main-width: 720px;
+    --header-height: 60px;
+    --footer-height: 60px;
+    --radius: 8px;
+
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+    --nordw: #ffffff;
+    /* Light mode colors using Nord */
+    --theme: var(--nordw);        /* nord6 - light background */
+    --entry: var(--nord6);        /* nord5 - slightly darker than theme */
+    --primary: var(--nord1);      /* nord3 - dark text */
+    --secondary: var(--nord3);    /* lighter text / muted */
+    --tertiary: var(--nord6);     /* nord4 - highlight or accent */
+    --content: var(--nord2);      /* nord1 - main content text */
+    --code-block-bg: var(--nord6);/* nord2 - code block background */
+    --code-bg: var(--nord6);      /* nord6 - inline code background */
+    --border: var(--nord4);       /* soft border color */
+
+    
+}
+
+.dark {
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+    --nordw: #ffffff;
+
+    --theme: var(--nord0);
+    --entry: var(--nord1);
+    --primary: var(--nord6);
+    --secondary: var(--nord4);
+    --tertiary: var(--nord1);
+    --content: var(--nord5);
+    --code-block-bg: var(--nord1);
+    --code-bg: var(--nord1);
+    --border: var(--nord3);
+}
