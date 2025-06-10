@@ -1,5 +1,5 @@
 +++
-title = "Frinds"
+title = "Friends"
 layout = "friends"
 url = "/friends/"
 +++

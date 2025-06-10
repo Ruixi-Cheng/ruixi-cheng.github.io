@@ -46,6 +46,11 @@
     --nord5: #e5e9f0;
     --nord6: #eceff4;
     --nordw: #ffffff;
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+    --nord11: #bf616a;
 
     --theme: var(--nord0);
     --entry: var(--nord1);

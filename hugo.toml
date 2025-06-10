@@ -28,9 +28,9 @@ defaultTheme = "dark"  # 默认使用暗色背景主题
     url = "/posts/"
     weight = 1
   [[menu.main]]
-    name = "Archives"
-    title = "Archives"
-    pageRef = "/archives/"
+    name = "Categories"
+    title = "Categories"
+    pageRef = "/categories/"
     weight = 2
   [[menu.main]]
     name = "Tags"
@@ -38,20 +38,27 @@ defaultTheme = "dark"  # 默认使用暗色背景主题
     pageRef = "/tags/"
     weight = 3
   [[menu.main]]
+    name = "Archives"
+    title = "Archives"
+    pageRef = "/archives/"
+    weight = 4
+  [[menu.main]]
     name = "Search"
     title = "Search"
     pageRef = "/search/"
-    weight = 4
+    weight = 5
   [[menu.main]]
     name = "Friends"
     title = "Friends"
     pageRef = "/friends/"
-    weight = 5
+    weight = 6
   [[menu.main]]
     name = "About"
     title = "About"
     pageRef = "/about/"
-    weight = 6
+    weight = 7
+  
+    
 
 [markup]
   [markup.highlight]

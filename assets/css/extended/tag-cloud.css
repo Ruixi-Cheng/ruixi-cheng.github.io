@@ -1,0 +1,43 @@
+/*标签云*/
+.terms-tags {
+    text-align: center;
+}
+
+.terms-tags a {
+    font-size: 24px;
+    font-weight: 100; 
+    color: var(--primary);
+    display: inline-block; 
+    background: none;
+    border-radius: var(--radius);
+    transition: transform 0.5s;
+}
+
+.terms-tags a:hover {
+    background: color-mix(in srgb, var(--code-block-bg) 100%, transparent);
+    border-radius: var(--radius);
+    transform: scale(1.2);
+    transition: all 0.3s ease;;
+}
+
+.dark.terms-tags a {
+    font-size: 24px;
+    font-weight: 100; 
+    color: var(--primary);
+    display: inline-block; 
+    background: none;
+    border-radius: var(--radius);
+    transition: transform 0.5s;
+}
+
+.dark .terms-tags a:hover {
+    background: color-mix(in srgb, var(--code-block-bg) 50%, transparent);
+    box-shadow: 0 0 15px var(--code-bg);
+    border-radius: var(--radius);
+    transform: scale(1.2);
+    transition: all 0.3s ease;;
+}
+
+.terms-tags li {
+    margin: 5px;
+}

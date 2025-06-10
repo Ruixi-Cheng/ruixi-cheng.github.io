@@ -3,8 +3,8 @@ title = 'Test Post'
 date = 2025-06-04
 lastmod = 2024-11-20T18:00:00+08:00
 draft = false
-categories = ["test"]
-tags = ["test"]
+categories = ["tech"]
+tags = ["test1"]
 +++
 # TEST $1+1=2$
 ```
@@ -12,6 +12,12 @@ print("Hello World")
 print("Hello World")
 print("Hello World")
 ```
+这是示例 {{< sidenote >}} 这是示例的侧边注解 {{< /sidenote >}}
+
+这是示例 {{< sidenote >}} 这是示例的侧边注解 {{< /sidenote >}}
+
+这是示例 {{< sidenote >}} 这是示例的侧边注解 {{< /sidenote >}}
+
 这是示例 {{< sidenote >}} 这是示例的侧边注解 {{< /sidenote >}}
 
 这是示例 {{< sidenote >}} 这是示例的侧边注解 {{< /sidenote >}}

@@ -4,7 +4,7 @@
   margin-right: -18vw;
   width: 40%;
   max-width: 200px;
-  background-color: var(--theme); /* 可选：给侧边注释一个背景色 */
+  background-color: none; /* 可选：给侧边注释一个背景色 */
   padding: 5px;
   border-radius: var(--radius);
 }
@@ -30,7 +30,7 @@ body {
   vertical-align: super;
   font-size: 0.8em;
   font-weight: 700;
-  color: var(--nord10);;
+  color: var(--nord10);
 }
 
 /* 当鼠标悬停在编号上时，高亮对应侧边注释 */
@@ -38,4 +38,25 @@ body {
 .sidenote-number:hover ~ .sidenote,
 .sidenote-number:hover .sidenote {
   background-color: var(--code-block-bg); /* 或者使用自定义变量 var(--sidenote-bg) */
+}
+
+/* 响应式：手机端样式 */
+@media (max-width: 768px) {
+  .sidenote {
+    float: none;
+    clear: both;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    font-size: 0.9em;
+  }
+
+  .sidenote::before {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 1em; /* 更大更清晰 */
+    font-weight: 600;
+  }
 }
