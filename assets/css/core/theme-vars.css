@@ -17,6 +17,12 @@
     --nord5: #e5e9f0;
     --nord6: #eceff4;
     --nordw: #ffffff;
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+    --nord11: #bf616a;
+
     /* Light mode colors using Nord */
     --theme: var(--nordw);        /* nord6 - light background */
     --entry: var(--nord6);        /* nord5 - slightly darker than theme */

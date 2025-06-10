@@ -1,0 +1,41 @@
+.sidenote {
+  float: right;
+  position: relative;
+  margin-right: -18vw;
+  width: 40%;
+  max-width: 200px;
+  background-color: var(--theme); /* 可选：给侧边注释一个背景色 */
+  padding: 5px;
+  border-radius: var(--radius);
+}
+
+body {
+  counter-reset: sidenote-counter; /* 初始化计数器 */
+}
+
+.sidenote::before {
+  content: "#"counter(sidenote-counter) " "; /* 显示当前计数器值 */
+  position: relative;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--nord11);
+}
+
+.sidenote-number {
+  counter-increment: sidenote-counter; /* 每次遇到 .sidenote-number 增加计数器 */
+}
+
+.sidenote-number::after {
+  content: "#"counter(sidenote-counter); /* 使用相同计数器显示数字 */
+  vertical-align: super;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--nord10);;
+}
+
+/* 当鼠标悬停在编号上时，高亮对应侧边注释 */
+.sidenote-number:hover + .sidenote,
+.sidenote-number:hover ~ .sidenote,
+.sidenote-number:hover .sidenote {
+  background-color: var(--code-block-bg); /* 或者使用自定义变量 var(--sidenote-bg) */
+}

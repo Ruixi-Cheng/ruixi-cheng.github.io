@@ -12,6 +12,12 @@ print("Hello World")
 print("Hello World")
 print("Hello World")
 ```
+这是示例 {{< sidenote >}} 这是示例的侧边注解 {{< /sidenote >}}
+
+这是示例 {{< sidenote >}} 这是示例的侧边注解 {{< /sidenote >}}
+
+这是示例 {{< sidenote >}} 这是示例的侧边注解 {{< /sidenote >}}
+
 # Heading 1
 ## Heading 2               
 ### Heading 3
