@@ -1,6 +1,7 @@
 +++
 title = 'Test Post'
 date = 2025-06-04
+lastmod = 2024-11-20T18:00:00+08:00
 draft = false
 categories = ["test"]
 tags = ["test"]
@@ -72,22 +73,6 @@ GFM a-tail link [@pandao](https://my.oschina.net/u/3691274)  邮箱地址自动�
 #### 行内代码 Inline code
 
 执行命令：`npm install marked`
-
-#### 缩进风格
-
-即缩进四个空格，也做为实现类似 `<pre>` 预格式化文本 ( Preformatted Text ) 的功能。
-
-    <?php
-        echo "Hello world!";
-    ?>
-    
-预格式化文本：
-
-    | First Header  | Second Header |
-    | ------------- | ------------- |
-    | Content Cell  | Content Cell  |
-    | Content Cell  | Content Cell  |
-
 
 ### 图片 Images
 
@@ -237,33 +222,6 @@ $$
                     
 $$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
 
-多行公式：
-
-```math
-\displaystyle
-\left( \sum\_{k=1}^n a\_k b\_k \right)^2
-\leq
-\left( \sum\_{k=1}^n a\_k^2 \right)
-\left( \sum\_{k=1}^n b\_k^2 \right)
-```
-
-```katex
-\displaystyle 
-    \frac{1}{
-        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
-        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
-        1+\frac{e^{-6\pi}}
-        {1+\frac{e^{-8\pi}}
-         {1+\cdots} }
-        } 
-    }
-```
-
-```latex
-f(x) = \int_{-\infty}^\infty
-    \hat f(\xi)\,e^{2 \pi i \xi x}
-    \,d\xi
-```
 
 ### 分页符 Page break
 

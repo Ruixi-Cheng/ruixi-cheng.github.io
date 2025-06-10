@@ -11,6 +11,7 @@ buildFuture = false # 是否构建未来发布的内容
 buildExpired = false # 是否构建已过期的内容
 defaultContentLanguage = "en" # 顶部首先展示的语言界面
 defaultContentLanguageInSubdir = false # 是否要在地址栏加上默认的语言代码
+defaultTheme = "dark"  # 默认使用暗色背景主题
 
 [caches]
   [caches.images]
@@ -59,21 +60,37 @@ defaultContentLanguageInSubdir = false # 是否要在地址栏加上默认的语
 [params]
   title = "Ruixi's Blog"
   author = "Ruixi"
+
+  # 数学公式支持
   math = true
+
+  # 评论功能
   comments = true
+
+  # 目录设置
   ShowToc = true
   tocopen = true
+
+  # 摘要设置
   hideSummary = false
-  defaultTheme = "dark" # 默认是暗色背景
-  ShowPostNavLinks = true # 显示文章导航链接
-  ShowWordCount = true # 显示文章字数统计
-  ShowBreadCrumbs = true # 显示面包屑导航
-  ShowCodeCopyButtons = true # 显示代码块复制按钮
-  ShowRssButtonInSectionTermList = true # RSS 相关
-  ShowAllPagesInArchive = true # 在归档页面展示所有的页面
-  disableScrollToTop = false # 启用返回顶部按钮
-  fancybox = true
-  DateFormat = "2006/01/02"
+
+  # 导航设置
+  ShowPostNavLinks = true   # 显示文章导航链接
+  ShowBreadCrumbs = true    # 显示面包屑导航
+  ShowRssButtonInSectionTermList = true  # RSS 相关按钮显示
+  ShowAllPagesInArchive = true         # 在归档页面显示所有页面
+  ShowCodeCopyButtons = true           # 显示代码块复制按钮
+  ShowWordCount = true                 # 显示文章字数统计
+
+  # 返回顶部按钮
+  disableScrollToTop = false  # 启用返回顶部按钮
+
+  # 图片浏览插件
+  fancybox = true  # 启用 Fancybox 灯箱效果
+
+  # 时间相关
+  showLastMod = true                # 显示最后修改时间
+  DateFormat = "2006/01/02"         # 日期格式化
 
   [params.assets]
     favicon = "favicon.png"
