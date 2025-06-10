@@ -4,7 +4,7 @@ View [ruixi.top](https://ruixi.top/)
 ## Todo
 - [x] 关于 界面
 - [x] 数学公式（Katex）
-- [ ] 悬浮目录
+- [x] 侧边目录
 - [x] 代码高亮（Nord）
 - [x] 友链
 - [x] 图片灯箱显示
