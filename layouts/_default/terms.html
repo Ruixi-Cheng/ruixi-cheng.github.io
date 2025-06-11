@@ -19,7 +19,7 @@
     {{- $count := .Count }}
     {{- $maxCount := 5 }}
     {{ $actualCount := 0 }}
-    
+
     {{ if lt $count $maxCount }}
     {{ $actualCount = $count }}
     {{ else }}
@@ -29,7 +29,7 @@
     {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
     <a href="{{ .Permalink }}">
         <div class="card" style="--cards: {{ $count }};">
-        <div class="child">
+            <div class="child">
                 <h2>{{ .Name }}</h2>
                 {{ with .Page.Params.description }}
                 <span>{{ . }}</span>
@@ -178,6 +178,31 @@
     .child:nth-child(10) {
         --offset: 9;
         z-index: -5;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            grid-gap: 16px;
+            padding: 0 24px
+        }
+
+        .card {
+            padding-bottom: 120%;
+            /* 调整高度比例 */
+        }
+
+        .child img {
+            width: 12rem;
+            /* 图片更小 */
+            left: 0.25rem;
+            bottom: 0.25rem;
+        }
+
+        .child p {
+            font-size: 0.85rem;
+            right: 0.5rem;
+            bottom: 0.5rem;
+        }
     }
 </style>
 
