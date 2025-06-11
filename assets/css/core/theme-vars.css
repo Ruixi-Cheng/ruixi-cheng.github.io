@@ -1,10 +1,10 @@
 :root {
     --gap: 24px;
     --content-gap: 20px;
-    --main-width: 800px;
-    --nav-width: 1320px;
+    --main-width: 720px;
+    --nav-width: 1280px;
     --article-width: 640px;
-    --toc-width: 300px;
+    --toc-width: 320px;
     --header-height: 60px;
     --footer-height: 60px;
     --radius: 8px;
@@ -22,36 +22,53 @@
     --nord9: #81a1c1;
     --nord10: #5e81ac;
     --nord11: #bf616a;
+    --nord12: #d08770;
+    --nord13: #ebcb8b;
+    --nord14: #a3be8c;
+    --nord15: #b48ead;
+
+    --nordrgb0: 46, 52, 64;
+    --nordrgb1: 59, 66, 82;
+    --nordrgb2: 67, 76, 94;
+    --nordrgb3: 76, 86, 106;
+    --nordrgb4: 216, 222, 233;
+    --nordrgb5: 229, 233, 240;
+    --nordrgb6: 236, 239, 244;
+    --nordrgbw: 255, 255, 255;
+    --nordrgb7: 143, 188, 187;
+    --nordrgb8: 136, 192, 208;
+    --nordrgb9: 129, 161, 193;
+    --nordrgb10: 94, 129, 172;
+    --nordrgb11: 191, 97, 106;
+    --nordrgb12: 208, 135, 112;
+    --nordrgb13: 235, 203, 139;
+    --nordrgb14: 163, 190, 140;
+    --nordrgb15: 180, 142, 173;
 
     /* Light mode colors using Nord */
-    --theme: var(--nordw);        /* nord6 - light background */
-    --entry: var(--nord6);        /* nord5 - slightly darker than theme */
-    --primary: var(--nord1);      /* nord3 - dark text */
-    --secondary: var(--nord3);    /* lighter text / muted */
-    --tertiary: var(--nord6);     /* nord4 - highlight or accent */
-    --content: var(--nord2);      /* nord1 - main content text */
-    --code-block-bg: var(--nord6);/* nord2 - code block background */
-    --code-bg: var(--nord6);      /* nord6 - inline code background */
-    --border: var(--nord4);       /* soft border color */
+    --theme: var(--nordw);
+    /* nord6 - light background */
+    --entry: var(--nord6);
+    /* nord5 - slightly darker than theme */
+    --primary: var(--nord1);
+    /* nord3 - dark text */
+    --secondary: var(--nord3);
+    /* lighter text / muted */
+    --tertiary: var(--nord6);
+    /* nord4 - highlight or accent */
+    --content: var(--nord2);
+    /* nord1 - main content text */
+    --code-block-bg: var(--nord6);
+    /* nord2 - code block background */
+    --code-bg: var(--nord6);
+    /* nord6 - inline code background */
+    --border: var(--nord4);
+    /* soft border color */
 
-    
+
 }
 
 .dark {
-    --nord0: #2e3440;
-    --nord1: #3b4252;
-    --nord2: #434c5e;
-    --nord3: #4c566a;
-    --nord4: #d8dee9;
-    --nord5: #e5e9f0;
-    --nord6: #eceff4;
-    --nordw: #ffffff;
-    --nord7: #8fbcbb;
-    --nord8: #88c0d0;
-    --nord9: #81a1c1;
-    --nord10: #5e81ac;
-    --nord11: #bf616a;
-
     --theme: var(--nord0);
     --entry: var(--nord1);
     --primary: var(--nord6);

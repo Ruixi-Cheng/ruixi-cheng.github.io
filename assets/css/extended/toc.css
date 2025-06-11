@@ -1,8 +1,6 @@
-
-
 .toc {
     margin: 0 2px 40px 2px;
-    border: 1px solid var(--border);
+    border: 0px solid var(--border);
     background: var(--entry);
     border-radius: var(--radius);
     padding: 0.4em;
@@ -74,7 +72,7 @@
 .toc li {
     list-style: none;
     font-size: 0.95rem;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
 }
 
 .toc li a:hover {
