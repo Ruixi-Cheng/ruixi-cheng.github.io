@@ -1,0 +1,110 @@
+baseURL = 'https://ruixi.top/'
+title = "Ruixi's Blog"
+theme = 'PaperMod'
+languageCode = 'en-US'
+
+defaultTheme = "dark"  # 默认使用暗色背景主题
+buildDrafts = false # 是否构建草稿
+buildFuture = false # 是否构建未来发布的内容
+buildExpired = false # 是否构建已过期的内容
+defaultContentLanguage = "en" # 顶部首先展示的语言界面
+enableRobotsTXT = true # 是否生成 robots.txt 文件
+enableInlineShortcodes = true # 是否启用内联 shortcode
+enableEmoji = true # 是否启用 Emoji 表情支持
+defaultContentLanguageInSubdir = true # 是否要在地址栏加上默认的语言代码
+
+[minify]
+  disableXML = true   # 防止 XML 文件被压缩出错
+  minifyOutput = true # 启用压缩优化输出体积
+
+[permalinks]
+  #post = "/:slug/"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    codeFences = false
+
+[params]
+  author = "Ruixi"
+
+  math = true # 数学公式支持
+  comments = true # 评论功能
+  showToc = true
+  tocOpen = true
+  showPostNavLinks = true   # 显示文章导航链接
+  showBreadCrumbs = true    # 显示面包屑导航
+  showRssButtonInSectionTermList = true  # RSS 相关按钮显示
+  showAllPagesInArchive = true         # 在归档页面显示所有页面
+  showCodeCopyButtons = true           # 显示代码块复制按钮
+  showWordCount = true                 # 显示文章字数统计
+  showLastMod = true                # 显示最后修改时间
+  disableScrollToTop = false  # 启用返回顶部按钮
+  fancyBox = true  # 启用 Fancybox 灯箱效果
+  dateFormat = "2006/01/02"         # 日期格式化
+  hideSummary = false
+
+  [params.assets]
+    favicon = "favicon.png"
+
+  [params.fuseOpts]
+    isCaseSensitive = false # 是否大小写敏感
+    shouldSort = true # 是否排序
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 2
+    #limit = 20 # 限制返回的搜索结果数量 
+    keys = ["title", "permalink", "summary", "content"]
+    includeMatches = true
+    
+[languages]
+  [languages.en]
+    title = "Ruixi's Blog"
+    languageName = "English"
+    languageCode = "en"
+
+    [languages.en.params.homeInfoParams]
+      Title = "Hi there. 👋"
+      Content = "这里是 Ruixi 的小站。"
+      
+    [[languages.en.params.socialIcons]]
+      name = "Github"
+      title = "Github"
+      icon = "Github"
+      url = "https://github.com/Ruixi-Cheng/"
+    [[languages.en.params.socialIcons]]
+      name = "Bilibili"
+      title = "Bilibili"
+      icon = "Bilibili"
+      url = "https://space.bilibili.com/329971737"
+
+  [languages.zh]
+    title = "Ruixi 的博客"
+    languageName = "中文"
+    languageCode = "zh"
+    
+    [languages.zh.params.homeInfoParams]
+      Title = "你好 👋"
+      Content = "这里是 Ruixi 的小站。"
+
+
+    [[languages.zh.params.socialIcons]]
+      name = "Github"
+      title = "Github"
+      icon = "Github"
+      url = "https://github.com/Ruixi-Cheng/" 
+
+    [[languages.zh.params.socialIcons]]
+      name = "Bilibili"
+      title = "Bilibili"
+      icon = "Bilibili"
+      url = "https://space.bilibili.com/329971737" 
+
+    

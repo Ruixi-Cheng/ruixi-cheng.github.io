@@ -1,0 +1,35 @@
+[[main]]
+name = "文章"
+title = "文章"
+pageRef = "/posts/"
+weight = 1
+[[main]]
+name = "分类"
+title = "分类"
+pageRef = "/categories/"
+weight = 2
+[[main]]
+name = "标签"
+title = "标签"
+pageRef = "/tags/"
+weight = 3
+[[main]]
+name = "归档"
+title = "归档"
+pageRef = "/archives/"
+weight = 4
+[[main]]
+name = "搜索"
+title = "搜索"
+pageRef = "/search/"
+weight = 5
+[[main]]
+name = "友链"
+title = "友链"
+pageRef = "/friends/"
+weight = 6
+[[main]]
+name = "关于"
+title = "关于"
+pageRef = "/about/"
+weight = 7
