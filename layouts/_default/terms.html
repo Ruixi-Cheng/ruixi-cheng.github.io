@@ -2,7 +2,7 @@
 
 {{- if .Title }}
 <header class="page-header">
-    <h1>{{ .Title }}</h1>
+    <h1>{{ i18n .Title | default .Title }}</h1>
     {{- if .Description }}
     <div class="post-description">
         {{ .Description }}
@@ -30,11 +30,11 @@
     <a href="{{ .Permalink }}">
         <div class="card" style="--cards: {{ $count }};">
             <div class="child">
-                <h2>{{ .Name }}</h2>
+                <h2>{{ i18n .Title | default .Title }}</h2>
                 {{ with .Page.Params.description }}
                 <span>{{ . }}</span>
                 {{ end }}
-                <p>{{ $count }} articles</p>
+                <p>{{ $count }} {{ i18n "category_articles_count" }}</p>
                 {{ if .Page.Params.image }}
                 <img src="{{ .Page.Params.image | relURL }}" alt="{{ .Page.Params.alt }}" />
                 {{ end }}

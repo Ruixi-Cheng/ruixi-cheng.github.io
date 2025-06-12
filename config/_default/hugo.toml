@@ -46,6 +46,7 @@ defaultContentLanguageInSubdir = true # 是否要在地址栏加上默认的语�
   showWordCount = true                 # 显示文章字数统计
   showLastMod = true                # 显示最后修改时间
   disableScrollToTop = false  # 启用返回顶部按钮
+  displayFullLangName = true
   fancyBox = true  # 启用 Fancybox 灯箱效果
   dateFormat = "2006/01/02"         # 日期格式化
   hideSummary = false
@@ -63,48 +64,5 @@ defaultContentLanguageInSubdir = true # 是否要在地址栏加上默认的语�
     #limit = 20 # 限制返回的搜索结果数量 
     keys = ["title", "permalink", "summary", "content"]
     includeMatches = true
-    
-[languages]
-  [languages.en]
-    title = "Ruixi's Blog"
-    languageName = "English"
-    languageCode = "en"
-
-    [languages.en.params.homeInfoParams]
-      Title = "Hi there. 👋"
-      Content = "这里是 Ruixi 的小站。"
-      
-    [[languages.en.params.socialIcons]]
-      name = "Github"
-      title = "Github"
-      icon = "Github"
-      url = "https://github.com/Ruixi-Cheng/"
-    [[languages.en.params.socialIcons]]
-      name = "Bilibili"
-      title = "Bilibili"
-      icon = "Bilibili"
-      url = "https://space.bilibili.com/329971737"
-
-  [languages.zh]
-    title = "Ruixi 的博客"
-    languageName = "中文"
-    languageCode = "zh"
-    
-    [languages.zh.params.homeInfoParams]
-      Title = "你好 👋"
-      Content = "这里是 Ruixi 的小站。"
-
-
-    [[languages.zh.params.socialIcons]]
-      name = "Github"
-      title = "Github"
-      icon = "Github"
-      url = "https://github.com/Ruixi-Cheng/" 
-
-    [[languages.zh.params.socialIcons]]
-      name = "Bilibili"
-      title = "Bilibili"
-      icon = "Bilibili"
-      url = "https://space.bilibili.com/329971737" 
 
     

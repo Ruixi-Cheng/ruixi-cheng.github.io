@@ -1,0 +1,63 @@
+[en]
+title = "Ruixi's Blog"
+languageName = "English"
+languageCode = "en"
+
+[en.params.homeInfoParams]
+Title = "Hi there. 👋"
+Content = "这里是 Ruixi 的小站。"
+
+[[en.params.socialIcons]]
+name = "Github"
+title = "Github"
+icon = "Github"
+url = "https://github.com/Ruixi-Cheng/"
+[[en.params.socialIcons]]
+name = "Bilibili"
+title = "Bilibili"
+icon = "Bilibili"
+url = "https://space.bilibili.com/329971737"
+
+[zh]
+title = "Ruixi 的博客"
+languageName = "中文"
+languageCode = "zh"
+
+[zh.params.homeInfoParams]
+Title = "你好 👋"
+Content = "这里是 Ruixi 的小站。"
+
+
+[[zh.params.socialIcons]]
+name = "Github"
+title = "Github"
+icon = "Github"
+url = "https://github.com/Ruixi-Cheng/"
+
+[[zh.params.socialIcons]]
+name = "Bilibili"
+title = "Bilibili"
+icon = "Bilibili"
+url = "https://space.bilibili.com/329971737"
+
+[ja]
+title = "Ruixiのブログ"
+languageName = "日本語"
+languageCode = "ja"
+
+[ja.params.homeInfoParams]
+Title = "你好 👋"
+Content = "这里是 Ruixi 的小站。"
+
+
+[[ja.params.socialIcons]]
+name = "Github"
+title = "Github"
+icon = "Github"
+url = "https://github.com/Ruixi-Cheng/"
+
+[[ja.params.socialIcons]]
+name = "Bilibili"
+title = "Bilibili"
+icon = "Bilibili"
+url = "https://space.bilibili.com/329971737"

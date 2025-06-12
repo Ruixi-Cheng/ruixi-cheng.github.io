@@ -1,0 +1,51 @@
+- id: prev_page
+  translation: "前へ"
+
+- id: next_page
+  translation: "次へ"
+
+- id: read_time
+  translation:
+    one: "1 分"
+    other: "{{ .Count }} 分"
+
+- id: words
+  translation:
+    one: "1 文字"
+    other: "{{ .Count }} 文字"
+
+- id: toc
+  translation: "目次"
+
+- id: translations
+  translation: "言語"
+
+- id: home
+  translation: "ホーム"
+
+- id: Posts
+  translation: "記事"
+
+- id: edit_post
+  translation: "編集"
+
+- id: code_copy
+  translation: "コピー"
+
+- id: code_copied
+  translation: "コピーされました！"
+
+- id: Tags
+  translation: "タグ"
+
+- id: Categories
+  translation: "カテゴリ"
+
+- id: category_articles_count
+  translation: "件の記事"
+
+- id: tech
+  translation: "技術"
+
+- id: lastmod_updated
+  translation: 更新日

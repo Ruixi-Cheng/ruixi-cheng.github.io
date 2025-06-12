@@ -9,7 +9,7 @@ View [ruixi.top](https://ruixi.top/)
 - [x] 友链
 - [x] 图片灯箱显示
 - [x] 评论功能（giscus）
-- [ ] i18n（也许）
+- [x] i18n（中、英、日）
 - [x] 更改字体（正文使用了 NotoSansSC，文件里预存了霞鹜文楷但并未使用。代码字体使用 FiraCode Nerd Font。）
 - [x] 标签云
 - [x] 拟物化分类

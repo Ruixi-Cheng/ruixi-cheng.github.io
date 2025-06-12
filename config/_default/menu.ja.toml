@@ -1,0 +1,41 @@
+[[main]]
+name = "記事"
+title = "記事"
+pageRef = "/posts/"
+weight = 1
+
+[[main]]
+name = "分類"
+title = "分類"
+pageRef = "/categories/"
+weight = 2
+
+[[main]]
+name = "タグ"
+title = "タグ"
+pageRef = "/tags/"
+weight = 3
+
+[[main]]
+name = "アーカイブ"
+title = "アーカイブ"
+pageRef = "/archives/"
+weight = 4
+
+[[main]]
+name = "検索"
+title = "検索"
+pageRef = "/search/"
+weight = 5
+
+[[main]]
+name = "リンク"
+title = "リンク"
+pageRef = "/friends/"
+weight = 6
+
+[[main]]
+name = "について"
+title = "について"
+pageRef = "/about/"
+weight = 7
