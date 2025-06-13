@@ -17,7 +17,7 @@
     background: color-mix(in srgb, var(--code-block-bg) 100%, transparent);
     border-radius: var(--radius);
     transform: scale(1.2);
-    transition: all 0.3s ease;;
+    transition: all 0.3s ease;
 }
 
 .dark.terms-tags a {
@@ -35,7 +35,7 @@
     box-shadow: 0 0 15px var(--code-bg);
     border-radius: var(--radius);
     transform: scale(1.2);
-    transition: all 0.3s ease;;
+    transition: all 0.3s ease;
 }
 
 .terms-tags li {

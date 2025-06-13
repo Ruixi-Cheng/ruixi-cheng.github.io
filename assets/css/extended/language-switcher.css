@@ -1,0 +1,61 @@
+/* assets/css/main.css */
+.lang-switch,
+.lang-select-dropdown {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .lang-switch {
+        display: inline-block;
+    }
+}
+@media (min-width: 769px) {
+    .lang-select-dropdown {
+        display: inline-block;
+    }
+}
+
+.lang-select-dropdown-content {
+    top: 50px;
+    display: none;
+    position: absolute;
+    background-color: var(--entry);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    max-height: calc(min(20em, 100vh - 100px));
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.lang-select-dropdown-content a {
+    font-size: 14px;
+    font-weight: inherit;
+    line-height: 1;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.lang-select-dropdown-content a:hover {
+    background-color: color-mix(in srgb, var(--primary) 20%, transparent);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.lang-select-dropdown:hover .lang-select-dropdown-content {
+    display: block;
+}
+
+.lang-select-dropdown-trigger {
+    height: 100%;
+    font-size: 26px;
+    margin: auto 4px;
+}
+
+.nav-separator {
+    margin: auto 4px;
+}

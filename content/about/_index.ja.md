@@ -1,7 +1,7 @@
 +++
-title = "About"
+title = "关于"
 layout = "about"
-url = "/about/"
 +++
 
 ### About
+111

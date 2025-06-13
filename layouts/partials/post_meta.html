@@ -11,7 +11,8 @@
 {{- if (.Param "ShowLastMod") -}}
     {{- if ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") -}}
         {{- $dateFormat := .Site.Params.dateFormat | default "January 2, 2006" -}}
-        {{- $updated := printf "Updated:&nbsp;%s" (.Lastmod.Format $dateFormat) -}}
+        {{- $updatedText := i18n "lastmod_updated" | default "Updated" -}}
+        {{- $updated := printf "%s:&nbsp;%s" $updatedText (.Lastmod.Format $dateFormat) -}}
         {{- $scratch.Add "meta" (slice $updated) -}}
     {{- end -}}
 {{- end -}}
