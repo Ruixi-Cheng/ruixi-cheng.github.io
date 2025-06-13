@@ -40,8 +40,9 @@
 }
 
 .active {
-    font-size: 110%;
+    font-size: 120%;
     font-weight: 600;
+    color: rgb(var(--nordrgb15));
 }
 
 .toc ul {
@@ -75,6 +76,12 @@
     padding-bottom: 0px;
 }
 
+.toc li a:not(.active) {
+    color: color-mix(in srgb, var(--primary) 60%, transparent);
+    transition: color 0.2s ease;
+}
+
 .toc li a:hover {
-    color: var(--secondary);
+    color: color-mix(in srgb, var(--primary) 100%, transparent);
+    transition: color 0.2s ease;
 }

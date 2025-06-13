@@ -18,7 +18,7 @@
 }
 
 .post-content blockquote {
-  background: var(--code-bg) !important;
+  background: var(--code-bg);
   color: var(--secondary);
   border-radius: 1px var(--radius) var(--radius) 1px;
 }

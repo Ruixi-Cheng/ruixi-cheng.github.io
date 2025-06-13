@@ -12,6 +12,9 @@ print("Hello World")
 print("Hello World")
 print("Hello World")
 ```
+
+{{< quote >}} Basically, I’m not interested in doing research and I never have been… I’m interested in understanding, which is quite a different thing. And often to understand something you have to work it out yourself because no one else has done it. — David Blackwell {{< /quote >}}
+
 这是示例 {{< sidenote >}} 这是示例的侧边注解 {{< /sidenote >}}
 
 这是示例 {{< sidenote >}} 这是示例的侧边注解 {{< /sidenote >}}

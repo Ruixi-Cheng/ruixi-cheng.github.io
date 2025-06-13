@@ -1,0 +1,25 @@
+/* 公共样式提取 */
+blockquote.quote,
+blockquote.quote-copyright {
+  position: relative;
+  margin: 1em auto;
+  padding-left: 2.5em;
+  border: none;
+  font-style: italic; /* 统一引用文字风格 */
+  line-height: 1.6;
+  background: var(--theme) !important;
+  color: var(--secondary);
+}
+
+/* 引号统一样式 */
+blockquote.quote::before{
+  content: "\"";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1;
+  color: var(--secondary); /* 可根据主题色设置颜色 */
+}
