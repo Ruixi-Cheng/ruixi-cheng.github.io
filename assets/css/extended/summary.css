@@ -1,0 +1,25 @@
+/* 隐藏浏览器默认箭头 */
+summary {
+  list-style: none;
+  position: relative;
+  padding-left: 1rem;
+  cursor: pointer;
+  color: var(--secondary);
+}
+
+/* 自定义箭头（模拟浏览器原生） */
+summary::before {
+  content: "▶";
+  position: absolute;
+  left: 0.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+  font-size: 0.6rem;
+  color: var(--secondary);
+}
+
+/* 展开时旋转箭头向下 */
+details[open] summary::before {
+  transform: translateY(-50%) rotate(90deg);
+}

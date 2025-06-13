@@ -7,6 +7,13 @@ categories = ["test"]
 tags = ["test5"]
 +++
 # TEST $1+1=2$
+
+{{< collapse summary=示例代码 >}}
+```
+print('Acc: 100%')
+```
+{{< /collapse >}}
+
 {{< notice notice-info >}} 一生疏狂尽余欢，半剖肝胆入剑寒。 剑至高危如蜀道，生逢穷途行路难。 {{< /notice >}}
 {{< notice notice-warning >}} 一生疏狂尽余欢，半剖肝胆入剑寒。 剑至高危如蜀道，生逢穷途行路难。 {{< /notice >}}
 {{< notice notice-tip >}} 一生疏狂尽余欢，半剖肝胆入剑寒。 剑至高危如蜀道，生逢穷途行路难。 {{< /notice >}}

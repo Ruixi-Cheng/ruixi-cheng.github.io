@@ -1,5 +1,5 @@
 .toc {
-    margin: 0 2px 40px 2px;
+    margin: 0 2px 0 2px;
     border: 0px solid var(--border);
     background: var(--entry);
     border-radius: var(--radius);
@@ -26,11 +26,23 @@
 }
 
 .toc details summary {
-    cursor: zoom-in;
+    cursor: pointer !important;
     margin-inline-start: 20px;
-    padding: 12px 0;
+    padding: 4px 0;
 }
-
+.toc summary::before {
+  content: "▶";
+  position: absolute;
+  left: -0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+  font-size: 0.6rem;
+  color: var(--secondary);
+}
+.toc details[open] summary::before {
+    transform: translateY(-50%) rotate(90deg);
+}
 .toc details[open] summary {
     font-weight: 500;
 }
@@ -50,7 +62,7 @@
 }
 
 .toc .inner {
-    margin: 0 0 0 20px;
+    margin: 0 0 0 5px;
     padding: 0px 15px 15px 20px;
     font-size: 16px;
 
