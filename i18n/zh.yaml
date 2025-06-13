@@ -48,4 +48,7 @@
   translation: "分类"
 
 - id: lastmod_updated
-  translation: 更新于
+  translation: "更新"
+
+- id: toc
+  translation: "目录"

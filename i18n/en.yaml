@@ -42,4 +42,7 @@
   translation: "articles"
 
 - id: lastmod_updated
-  translation: Updated
+  translation: "Updated"
+
+- id: toc
+  translation: "Table of Contents"

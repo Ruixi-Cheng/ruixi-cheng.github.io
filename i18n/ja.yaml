@@ -49,3 +49,6 @@
 
 - id: lastmod_updated
   translation: 更新日
+
+- id: toc
+  translation: "目次"
