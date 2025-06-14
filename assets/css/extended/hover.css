@@ -1,0 +1,61 @@
+.logo a {
+    color: var(--primary);
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+
+.logo a:hover {
+    color: color-mix(in srgb, var(--primary) 80%, transparent);
+    transform: scale(0.95);
+    transition: all 0.15s ease;
+}
+
+#menu a {
+    transition: all 0.13s ease;
+}
+
+#menu a:hover {
+    color: color-mix(in srgb, var(--primary) 80%, transparent);
+    transform: scale(0.95);
+    transition: all 0.15s ease;
+}
+
+#moon {
+    transition: all 0.3s ease;
+}
+
+#sun {
+    transition: all 0.3s ease;
+}
+
+#moon:hover {
+    transform: rotate(15deg);
+    color: var(--nord10);
+    transition: all 0.15s ease;
+}
+
+#sun:hover {
+    transform: rotate(15deg);
+    color: var(--nord13);
+    transition: all 0.15s ease;
+}
+
+svg {
+    transition: 0.3s;
+}
+
+svg:hover {
+    transition: 0.15s;
+}
+
+.social-icons a:nth-child(1) svg:hover{
+    color: color-mix(in srgb, var(--primary) 80%, transparent);
+    transform: scale(0.95);
+    transition: all 0.15s ease;
+}
+
+.social-icons a:nth-child(2) svg:hover {
+    color: color-mix(in srgb, var(--primary) 80%, transparent);
+    transform: scale(0.95);
+    transition: all 0.15s ease;
+}
