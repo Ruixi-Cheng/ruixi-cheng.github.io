@@ -1,0 +1,36 @@
+.paginav {
+    display: flex;
+    line-height: 32px;
+    border: none;
+    background-color: var(--theme);
+    gap: 16px
+}
+
+.paginav a {
+    border-radius: var(--radius);
+    background-color: var(--code-block-bg);
+    padding: 4px 16px
+}
+
+.paginav .title {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: small;
+    color: var(--secondary);
+}
+
+.paginav .prev,
+.paginav .next {
+    width: 40%;
+    border-radius: var(--radius);
+    
+}
+
+.paginav span:hover:not(.title) {
+    box-shadow: 0 1px 0;
+}
+
+.paginav .next {
+    margin-inline-start: auto;
+    text-align: right;
+}
