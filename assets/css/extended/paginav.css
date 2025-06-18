@@ -2,7 +2,7 @@
     display: flex;
     line-height: 32px;
     border: none;
-    background-color: var(--theme);
+    background-color: var(--code-block-bg);
     gap: 16px
 }
 
@@ -19,18 +19,16 @@
     color: var(--secondary);
 }
 
-.paginav .prev,
-.paginav .next {
-    width: 40%;
-    border-radius: var(--radius);
+.paginav .prev{
+    width: 50%;
+    border-radius: var(--radius) 0 0 var(--radius);
     
 }
-
+.paginav .next {
+    width: 50%;
+    border-radius: 0  var(--radius) var(--radius) 0;
+    
+}
 .paginav span:hover:not(.title) {
     box-shadow: 0 1px 0;
-}
-
-.paginav .next {
-    margin-inline-start: auto;
-    text-align: right;
 }
