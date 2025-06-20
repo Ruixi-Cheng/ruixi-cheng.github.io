@@ -1,4 +1,5 @@
 +++
+slug = 'test2'
 title = 'Test Post'
 date = 2025-06-04
 lastmod = 2024-11-20T18:00:00+08:00

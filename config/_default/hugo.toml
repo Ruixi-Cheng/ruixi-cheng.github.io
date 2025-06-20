@@ -18,7 +18,7 @@ defaultContentLanguageInSubdir = true # 是否要在地址栏加上默认的语�
   minifyOutput = true # 启用压缩优化输出体积
 
 [permalinks]
-  #post = "/:slug/"
+  post = "/:slug/"
 
 [caches]
   [caches.images]
@@ -33,7 +33,7 @@ defaultContentLanguageInSubdir = true # 是否要在地址栏加上默认的语�
 
 [params]
   author = "Ruixi"
-
+  defaultTheme = "dark"
   math = true # 数学公式支持
   comments = true # 评论功能
   showToc = true
