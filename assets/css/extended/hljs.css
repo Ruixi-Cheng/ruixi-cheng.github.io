@@ -1,263 +1,359 @@
 pre code.hljs {
     display: block;
     overflow-x: auto;
-    padding: 1em
+    padding: 1em !important
 }
 
 code.hljs {
     padding: 3px 5px
 }
 
+/*
+
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
+
+*/
 .hljs {
-    background: #2e3440
+    color: #383a42;
+    background: #fafafa
 }
 
-.hljs,
+.hljs-comment,
+.hljs-quote {
+    color: #a0a1a7;
+    font-style: italic
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+    color: #a626a4
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
 .hljs-subst {
-    color: #d8dee9
+    color: #e45649
 }
 
-.hljs-selector-tag {
-    color: #81a1c1
+.hljs-literal {
+    color: #0184bb
 }
 
-.hljs-selector-id {
-    color: #8fbcbb;
-    font-weight: 700
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+    color: #50a14f
 }
 
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
 .hljs-selector-attr,
-.hljs-selector-class {
-    color: #8fbcbb
+.hljs-selector-pseudo,
+.hljs-number {
+    color: #986801
 }
 
-.hljs-property,
-.hljs-selector-pseudo {
-    color: #88c0d0
-}
-
-.hljs-addition {
-    background-color: rgba(163, 190, 140, .5)
-}
-
-.hljs-deletion {
-    background-color: rgba(191, 97, 106, .5)
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+    color: #4078f2
 }
 
 .hljs-built_in,
-.hljs-class,
-.hljs-type {
-    color: #8fbcbb
-}
-
-.hljs-function,
-.hljs-function>.hljs-title,
-.hljs-title.hljs-function {
-    color: #88c0d0
-}
-
-.hljs-keyword,
-.hljs-literal,
-.hljs-symbol {
-    color: #81a1c1
-}
-
-.hljs-number {
-    color: #b48ead
-}
-
-.hljs-regexp {
-    color: #ebcb8b
-}
-
-.hljs-string {
-    color: #a3be8c
-}
-
-.hljs-title {
-    color: #8fbcbb
-}
-
-.hljs-params {
-    color: #d8dee9
-}
-
-.hljs-bullet {
-    color: #81a1c1
-}
-
-.hljs-code {
-    color: #8fbcbb
+.hljs-title.class_,
+.hljs-class .hljs-title {
+    color: #c18401
 }
 
 .hljs-emphasis {
     font-style: italic
 }
 
-.hljs-formula {
-    color: #8fbcbb
-}
-
 .hljs-strong {
-    font-weight: 700
+    font-weight: bold
 }
 
-.hljs-link:hover {
+.hljs-link {
     text-decoration: underline
 }
 
-.hljs-comment,
-.hljs-quote {
-    color:#4c566a
-}
+body.dark {
+    .hljs {
+        background: #2e3440
+    }
 
-.hljs-doctag {
-    color: #8fbcbb
-}
+    .hljs,
+    .hljs-subst {
+        color: #d8dee9
+    }
 
-.hljs-meta,
-.hljs-meta .hljs-keyword {
-    color: #5e81ac
-}
+    .hljs-selector-tag {
+        color: #81a1c1
+    }
 
-.hljs-meta .hljs-string {
-    color: #a3be8c
-}
+    .hljs-selector-id {
+        color: #8fbcbb;
+        font-weight: 700
+    }
 
-.hljs-attr {
-    color: #8fbcbb
-}
+    .hljs-selector-attr,
+    .hljs-selector-class {
+        color: #8fbcbb
+    }
 
-.hljs-attribute {
-    color: #d8dee9
-}
+    .hljs-property,
+    .hljs-selector-pseudo {
+        color: #88c0d0
+    }
 
-.hljs-name {
-    color: #81a1c1
-}
+    .hljs-addition {
+        background-color: rgba(163, 190, 140, .5)
+    }
 
-.hljs-section {
-    color: #88c0d0
-}
+    .hljs-deletion {
+        background-color: rgba(191, 97, 106, .5)
+    }
 
-.hljs-tag {
-    color: #81a1c1
-}
+    .hljs-built_in,
+    .hljs-class,
+    .hljs-type {
+        color: #8fbcbb
+    }
 
-.hljs-template-variable,
-.hljs-variable {
-    color: #d8dee9
-}
+    .hljs-function,
+    .hljs-function>.hljs-title,
+    .hljs-title.hljs-function {
+        color: #88c0d0
+    }
 
-.hljs-template-tag {
-    color: #5e81ac
-}
+    .hljs-keyword,
+    .hljs-literal,
+    .hljs-symbol {
+        color: #81a1c1
+    }
 
-.language-abnf .hljs-attribute {
-    color: #88c0d0
-}
+    .hljs-number {
+        color: #b48ead
+    }
 
-.language-abnf .hljs-symbol {
-    color: #ebcb8b
-}
+    .hljs-regexp {
+        color: #ebcb8b
+    }
 
-.language-apache .hljs-attribute {
-    color: #88c0d0
-}
+    .hljs-string {
+        color: #a3be8c
+    }
 
-.language-apache .hljs-section {
-    color: #81a1c1
-}
+    .hljs-title {
+        color: #8fbcbb
+    }
 
-.language-arduino .hljs-built_in {
-    color: #88c0d0
-}
+    .hljs-params {
+        color: #d8dee9
+    }
 
-.language-aspectj .hljs-meta {
-    color: #d08770
-}
+    .hljs-bullet {
+        color: #81a1c1
+    }
 
-.language-aspectj>.hljs-title {
-    color: #88c0d0
-}
+    .hljs-code {
+        color: #8fbcbb
+    }
 
-.language-bnf .hljs-attribute {
-    color: #8fbcbb
-}
+    .hljs-emphasis {
+        font-style: italic
+    }
 
-.language-clojure .hljs-name {
-    color: #88c0d0
-}
+    .hljs-formula {
+        color: #8fbcbb
+    }
 
-.language-clojure .hljs-symbol {
-    color: #ebcb8b
-}
+    .hljs-strong {
+        font-weight: 700
+    }
 
-.language-coq .hljs-built_in {
-    color: #88c0d0
-}
+    .hljs-link:hover {
+        text-decoration: underline
+    }
 
-.language-cpp .hljs-meta .hljs-string {
-    color: #8fbcbb
-}
+    .hljs-comment,
+    .hljs-quote {
+        color: #4c566a
+    }
 
-.language-css .hljs-built_in {
-    color: #88c0d0
-}
+    .hljs-doctag {
+        color: #8fbcbb
+    }
 
-.language-css .hljs-keyword {
-    color: #d08770
-}
+    .hljs-meta,
+    .hljs-meta .hljs-keyword {
+        color: #5e81ac
+    }
 
-.language-diff .hljs-meta,
-.language-ebnf .hljs-attribute {
-    color: #8fbcbb
-}
+    .hljs-meta .hljs-string {
+        color: #a3be8c
+    }
 
-.language-glsl .hljs-built_in {
-    color: #88c0d0
-}
+    .hljs-attr {
+        color: #8fbcbb
+    }
 
-.language-groovy .hljs-meta:not(:first-child),
-.language-haxe .hljs-meta,
-.language-java .hljs-meta {
-    color: #d08770
-}
+    .hljs-attribute {
+        color: #d8dee9
+    }
 
-.language-ldif .hljs-attribute {
-    color: #8fbcbb
-}
+    .hljs-name {
+        color: #81a1c1
+    }
 
-.language-lisp .hljs-name,
-.language-lua .hljs-built_in,
-.language-moonscript .hljs-built_in,
-.language-nginx .hljs-attribute {
-    color: #88c0d0
-}
+    .hljs-section {
+        color: #88c0d0
+    }
 
-.language-nginx .hljs-section {
-    color: #5e81ac
-}
+    .hljs-tag {
+        color: #81a1c1
+    }
 
-.language-pf .hljs-built_in,
-.language-processing .hljs-built_in {
-    color: #88c0d0
-}
+    .hljs-template-variable,
+    .hljs-variable {
+        color: #d8dee9
+    }
 
-.language-scss .hljs-keyword,
-.language-stylus .hljs-keyword {
-    color: #81a1c1
-}
+    .hljs-template-tag {
+        color: #5e81ac
+    }
 
-.language-swift .hljs-meta {
-    color: #d08770
-}
+    .language-abnf .hljs-attribute {
+        color: #88c0d0
+    }
 
-.language-vim .hljs-built_in {
-    color: #88c0d0;
-    font-style: italic
-}
+    .language-abnf .hljs-symbol {
+        color: #ebcb8b
+    }
 
-.language-yaml .hljs-meta {
-    color: #d08770
+    .language-apache .hljs-attribute {
+        color: #88c0d0
+    }
+
+    .language-apache .hljs-section {
+        color: #81a1c1
+    }
+
+    .language-arduino .hljs-built_in {
+        color: #88c0d0
+    }
+
+    .language-aspectj .hljs-meta {
+        color: #d08770
+    }
+
+    .language-aspectj>.hljs-title {
+        color: #88c0d0
+    }
+
+    .language-bnf .hljs-attribute {
+        color: #8fbcbb
+    }
+
+    .language-clojure .hljs-name {
+        color: #88c0d0
+    }
+
+    .language-clojure .hljs-symbol {
+        color: #ebcb8b
+    }
+
+    .language-coq .hljs-built_in {
+        color: #88c0d0
+    }
+
+    .language-cpp .hljs-meta .hljs-string {
+        color: #8fbcbb
+    }
+
+    .language-css .hljs-built_in {
+        color: #88c0d0
+    }
+
+    .language-css .hljs-keyword {
+        color: #d08770
+    }
+
+    .language-diff .hljs-meta,
+    .language-ebnf .hljs-attribute {
+        color: #8fbcbb
+    }
+
+    .language-glsl .hljs-built_in {
+        color: #88c0d0
+    }
+
+    .language-groovy .hljs-meta:not(:first-child),
+    .language-haxe .hljs-meta,
+    .language-java .hljs-meta {
+        color: #d08770
+    }
+
+    .language-ldif .hljs-attribute {
+        color: #8fbcbb
+    }
+
+    .language-lisp .hljs-name,
+    .language-lua .hljs-built_in,
+    .language-moonscript .hljs-built_in,
+    .language-nginx .hljs-attribute {
+        color: #88c0d0
+    }
+
+    .language-nginx .hljs-section {
+        color: #5e81ac
+    }
+
+    .language-pf .hljs-built_in,
+    .language-processing .hljs-built_in {
+        color: #88c0d0
+    }
+
+    .language-scss .hljs-keyword,
+    .language-stylus .hljs-keyword {
+        color: #81a1c1
+    }
+
+    .language-swift .hljs-meta {
+        color: #d08770
+    }
+
+    .language-vim .hljs-built_in {
+        color: #88c0d0;
+        font-style: italic
+    }
+
+    .language-yaml .hljs-meta {
+        color: #d08770
+    }
 }

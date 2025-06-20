@@ -20,6 +20,7 @@
 .post-content blockquote {
   background: var(--code-bg);
   color: var(--secondary);
+  padding: 0 0.8em;
   border-radius: 1px var(--radius) var(--radius) 1px;
 }
 
