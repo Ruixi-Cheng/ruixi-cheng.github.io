@@ -3,7 +3,7 @@ blockquote.quote,
 blockquote.quote-copyright {
   position: relative;
   margin: 1em auto;
-  padding-left: 2.5em;
+  padding-left: 2.5em !important;
   border: none;
   font-style: italic; /* 统一引用文字风格 */
   line-height: 1.6;
