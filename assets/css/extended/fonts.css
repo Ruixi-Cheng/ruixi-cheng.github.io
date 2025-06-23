@@ -19,6 +19,7 @@
 
 /* 应用于整个网站 */
 body {
+    font-size: medium !important;
     font-family: 'NotoSansSC', sans-serif !important;
 }
 code, pre {

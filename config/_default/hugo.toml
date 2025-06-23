@@ -30,6 +30,13 @@ defaultContentLanguageInSubdir = true # 是否要在地址栏加上默认的语�
 [markup]
   [markup.highlight]
     codeFences = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-H5HDF4EPT6'
 
 [params]
   author = "Ruixi"
@@ -60,9 +67,6 @@ defaultContentLanguageInSubdir = true # 是否要在地址栏加上默认的语�
     location = 0
     distance = 1000
     threshold = 0.4
-    minMatchCharLength = 2
-    #limit = 20 # 限制返回的搜索结果数量 
+    minMatchCharLength = 2 # limit = 20 # 限制返回的搜索结果数量 
     keys = ["title", "permalink", "summary", "content"]
     includeMatches = true
-
-    

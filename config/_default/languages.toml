@@ -5,7 +5,7 @@ languageCode = "en"
 
 [en.params.homeInfoParams]
 Title = "Hi there. 👋"
-Content = "这里是 Ruixi 的小站。"
+Content = "This is Ruixi's cozy corner on the web."
 
 [[en.params.socialIcons]]
 name = "Github"
