@@ -33,6 +33,8 @@ defaultContentLanguageInSubdir = true # 是否要在地址栏加上默认的语�
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.extensions]
+      typographer = false # 禁用goldmark符号替换
 
 [services]
   [services.googleAnalytics]
