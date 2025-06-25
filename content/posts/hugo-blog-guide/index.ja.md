@@ -2,7 +2,7 @@
 title = 'Hugo 博客搭建指南'
 slug = 'hugo-blog-guide'
 date = 2025-06-22T18:20:00+08:00
-lastmod = 2025-06-24T20:44:00+08:00
+lastmod = 2025-06-24T15:50:00+08:00
 draft = false
 categories = ["Blog"]
 tags = ["hugo","blog","tinker"]
@@ -53,7 +53,7 @@ hugo version
 
 ### 主题选择
 
-Hugo 官网的[主题页面](https://themes.gohugo.io/)提供了许多不同用途的主题以供选择。
+Hugo 官网的 [主题页面](https://themes.gohugo.io/) 提供了许多不同用途的主题以供选择。
 
 笔者选择了 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) 主题，因其简洁现代的设计风格和良好的功能支持。
 
@@ -239,7 +239,7 @@ hugo server -D # -D 参数会生成草稿内容
 
 ## Hugo 配置
 
-[Hugo 配置文件](https://gohugo.io/configuration/)一般为站点根目录下的单一配置文件 `hugo.toml` 或 `hugo.yaml` 、 `hugo.json` 文件。
+[Hugo 配置文件](https://gohugo.io/configuration/) 一般为站点根目录下的单一配置文件 `hugo.toml` 或 `hugo.yaml` 、 `hugo.json` 文件。
 
 笔者选择了 `.toml` 文件。
 
@@ -255,7 +255,7 @@ config/
     └── menu.zh.toml
 ```
 
-详见<https://gohugo.io/configuration/introduction/#configuration-directory>
+详见 <https://gohugo.io/configuration/introduction/#configuration-directory>
 
 笔者配置如下，供大家参考：
 
@@ -486,7 +486,7 @@ weight = 4              # 菜单排序权重值
 ```
 
 再如上文新增「归档」页面,创建 `about.md` 文件，或是 `about` 文件夹。
-Markdown内容如下：
+Markdown 内容如下：
 
 ```markdown
 +++
@@ -738,7 +738,7 @@ layout = "search"
 
 ### 「分类」页面
 
-参考了[道与的不拆笔记](https://daoyuchan.com/log/build_categories_page/)
+参考了 [道与的不拆笔记 - PaperMod 主题自定义类别页面 （纸张合并本拟物风格）](https://daoyuchan.com/log/build_categories_page/)。
 
 将 `themes/PaperMod/layouts/_default/terms.html` 复制到 `layouts/_default/terms.html` 并对其进行修改。
 
@@ -1156,7 +1156,7 @@ code, pre {
 
 ### 侧边目录
 
-参考了<https://yunpengtai.top/posts/hugo-journey/>
+参考了 <https://yunpengtai.top/posts/hugo-journey/>。
 
 
 ## 功能增强
@@ -1165,9 +1165,9 @@ code, pre {
 
 #### 基础集成
 
-参考了[意琦行的个人博客](https://www.lixueduan.com/posts/blog/02-add-giscus-comment/)。
+参考了 [意琦行的个人博客 - Hugo 博客引入 Giscus 评论系统](https://www.lixueduan.com/posts/blog/02-add-giscus-comment/)。
 
-本博客的评论系统为 [giscus](https://giscus.app/)，允许访客通过 GitHub 账号发表评论。
+本博客的评论系统为 [giscus](https://giscus.app/)，允许访客通过 GitHub 账号发表评论和互动。
 
 >利用 GitHub Discussions 实现的评论系统，让访客借助 GitHub 在你的网站上留下评论和反应吧！本项目深受 utterances 的启发。
 >- 开源。🌏
@@ -1203,9 +1203,7 @@ code, pre {
 </script>
 ```
 
-写入 `layouts/partials/comments.html` 文件
-
-修改 Hugo 配置文件：
+将上述代码保存至 `layouts/partials/comments.html` 文件，并在 Hugo 配置文件中启用评论功能：
 
 ```toml
 [params]
@@ -1216,7 +1214,9 @@ comments = true
 
 #### 实现多语言支持
 
-本博客实现了评论系统的多语言支持。修改 `comments.html` 为：
+本博客实现了评论系统的多语言支持。
+
+笔者对 `comments.html` 进行了修改，使其根据当前页面的语言自动切换 giscus 的界面语言。
 
 {{<collapse summary="修改后的 comments.html">}}
 ```html
@@ -1281,8 +1281,135 @@ site.Language.Lang "vi" }} {{ $giscusLang = "vi" }} {{ end }}
 ![ja评论区.png](https://s21.ax1x.com/2025/06/25/pVeaaBd.png)
 *日语界面*
 
-通过以上配置，即可在 Hugo 博客中实现多语言评论系统。
+通过以上配置，即可在 Hugo 博客中实现评论系统的多语言适配。
 
-### 代码折叠
+#### 多语言共享评论区
 
-### 图片灯箱效果
+若希望多个语言版本的文章共享同一评论区，需要确保所有语言版本使用相同的  `slug`。
+
+为此，在 Hugo 配置文件中设置链接规则：
+
+```toml
+[permalinks]
+post = "/:slug/"
+```
+
+这样，每篇文章的 URL 格式变为 `https://[你的域名]/[语言代码（如果配置了多语言）]/posts/[文章的 slug]`。
+
+例如，本篇博文的元数据如下：
+
+```toml
++++
+title = 'Hugo 博客搭建指南'
+slug = 'hugo-blog-guide'
+date = 2025-06-22T18:20:00+08:00
+lastmod = 2025-06-25T15:50:00+08:00
+draft = false
+categories = ["Blog"]
+tags = ["hugo","blog","tinker"]
++++
+```
+则其 URL 为： `http://ruixi.top/zh/posts/hugo-blog-guide/`。
+
+在 `comments.html` 中设置了如下参数：
+
+```
+data-mapping="specific"
+data-term='posts/{{ .Params.slug }}'
+```
+这些参数会使 giscus 以文章的 `posts/[:slug]` 为关键字去匹配 GitHub Discussions 中的评论话题，从而实现跨语言共享评论区。
+
+### 折叠块功能
+
+参考 <https://yunpengtai.top/posts/hugo-journey/>。
+
+这是一个非常实用的小功能，能在博客内折叠隐藏较长或非核心内容（长代码块、文字等），提升页面整洁度与阅读体验。
+
+效果展示：
+
+{{<collapse summary="这是折叠的代码">}}
+```c
+#include <stdio.h>
+int main()
+{
+   printf("Hello, World!");
+   return 0;
+}
+```
+{{</collapse>}}
+
+为此,需新增 `layouts/shortcodes/collapse.html` 文件：
+
+```html
+{{ if .Get "summary" }}
+{{ else }}
+{{ warnf "missing value for param 'summary': %s" .Position }}
+{{ end }}
+<p><details {{ if (eq (.Get "openByDefault") true) }} open=true {{ end }}>
+  <summary markdown="span">{{ .Get "summary" | markdownify }}</summary>
+  {{ .Inner | markdownify }}
+</details></p>
+```
+
+使用也很方便，参考下图：
+
+![折叠块代码.png](https://s21.ax1x.com/2025/06/26/pVejYuV.png)
+
+支持两个参数：
+- `summary`：用于设置折叠面板的标题（必填）
+- `openByDefault`：布尔值，控制面板是否默认展开（可选）
+  
+### Fancybox 图片灯箱效果
+
+参考了 [人生筆記簿 - hugo-使用-fancybox-实现图片灯箱-放大功能](https://blog.muxilong.com/pocket/hugo/hugo-%E4%BD%BF%E7%94%A8-fancybox-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E7%81%AF%E7%AE%B1-%E6%94%BE%E5%A4%A7%E5%8A%9F%E8%83%BD/)。
+
+添加 `layouts/_default/_markup/render-image.html` 文件：
+
+```html
+{{if .Page.Site.Params.fancybox }}
+<div class="post-img-view">
+    <a data-fancybox="gallery" href="{{ .Destination | safeURL }}" data-caption="{{ .Text }}">
+        <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
+    </a>
+</div>
+{{ end }}
+```
+
+修改 Hugo 配置文件，以启用灯箱效果：
+
+```toml
+[param]
+fancyBox = true
+```
+
+在 `layouts/partials/extend_footer.html` 中增加：
+
+```html
+{{if .Page.Site.Params.fancybox }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+{{ end }}
+```
+### 盘古之白
+
+受到 [🏄‍♂️ 不入流的人生解决方案 - 不入流的文体｜关于「盘古之白」和「直角引号」](https://eddy.lu/posts/pangu/#%e7%9b%98%e5%8f%a4%e4%b9%8b%e7%99%bd%e6%98%af%e4%bb%80%e4%b9%88) 的启发。
+
+在中文与英文、数字或符号混排时，应适当加入一个空格，这能让文字之间的界限更清晰，视觉上也更舒适。
+
+> 漢學家稱這個空白字元為「盤古之白」，因為它劈開了全形字和半形字之間的混沌。
+> 
+> 另有研究顯示，打字的時候不喜歡在中文和英文之間加空格的人，感情路都走得很辛苦，有七成的比例會在 34 歲的時候跟自己不愛的人結婚，而其餘三成的人最後只能把遺產留給自己的貓。畢竟愛情跟書寫都需要適時地留白。
+> 
+> 與大家共勉之。
+
+本博客在写作过程中尽量遵循「盘古之白」的排版原则。不过为了以防万一，也引入了一个 JS 插件自动处理这个问题。
+
+在 `layouts/partials/extend_footer.html` 内新增以下代码来引入 [pangu.js](https://github.com/vinta/pangu.js)。
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.js"></script>
+<script>
+   pangu.spacingPage();
+</script>
+```
