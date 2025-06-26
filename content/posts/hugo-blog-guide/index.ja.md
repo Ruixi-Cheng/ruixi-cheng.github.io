@@ -32,7 +32,7 @@ tags = ["hugo","blog","tinker"]
 
 ## 为什么是 Hugo?
 
-![hugo](https://gohugo.io/images/hugo-logo-wide.svg)
+<img src="https://gohugo.io/images/hugo-logo-wide.svg" alt="hugo" />
 
 私以为，对于个人开发者而言，动态博客的一些复杂功能——如用户系统、权限管理，性能监控等——显得较为多余。毕竟，写作的核心在于内容本身。
 
@@ -72,7 +72,7 @@ hugo server # 启动 Hugo 本地服务器
 
 你会在终端中看到本地站点的 URL（通常为 http://localhost:1313）。通过浏览器访问即可看见 PaperMod 的默认页面效果：
 
-![新站点.png](https://s21.ax1x.com/2025/06/24/pVeKOY9.png)
+<img src="https://s21.ax1x.com/2025/06/24/pVeKOY9.png" alt="新站点.png" />
 
 ### 站点结构
 
@@ -976,7 +976,7 @@ This is the test category page.
 
 这样就新增了一个类别。效果如图：
 
-![「分类」页面.png](https://s21.ax1x.com/2025/06/24/pVeMSOK.png)
+<img src="https://s21.ax1x.com/2025/06/24/pVeMSOK.png" alt="「分类」页面.png" />
 
 ## 博客样式优化
 
@@ -1154,10 +1154,492 @@ code, pre {
 
 你可以根据自己的喜好修改配色文件。
 
-### 侧边目录
+### 修改代码高亮样式
 
-参考了 <https://yunpengtai.top/posts/hugo-journey/>。
+本博客使用了 `highlight.js` 插件来实现代码高亮，而不是 Hugo 自带的 `Chroma` 渲染器。至于为何选择 `highlight.js`，笔者一时也记不清具体原因了 ToT。
 
+首先，在 Hugo 配置文件中将 `Chroma` 禁用，避免冲突：
+
+```toml
+[markup]
+  [markup.highlight]
+    codeFences = false
+```
+
+然后在 `layouts/partials/extend_footer.html` 文件内添加 `highlight.js` 插件。
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script>
+   document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+         hljs.highlightElement(block);
+      });
+   });
+</script>
+```
+
+最后将你希望使用的代码高亮样式文件（`.css`）放在 `assets/css/extended` 文件夹下即可。可以在 <https://cdnjs.com/libraries/highlight.js> 下载你喜欢的高亮样式主题。
+
+以下是一个简单的 CSS 示例，可以为明暗模式分别设置不同的代码高亮样式：
+
+```css
+.hljs {
+    color: #383a42;
+    background: #fafafa
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: #a0a1a7;
+    font-style: italic
+}
+
+...
+
+body.dark {
+    .hljs {
+        background: #2e3440
+    }
+
+    .hljs,
+    .hljs-subst {
+        color: #d8dee9
+    }
+
+    ...
+
+}
+```
+本博客采用的代码高亮样式为：
+- 明亮模式：`Atom One Light` 
+- 黑暗模式：`Nord`
+
+{{<collapse summary="本博客代码高亮样式：assets/css/extended/hljs.css">}}
+```css
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em !important
+}
+
+code.hljs {
+    padding: 3px 5px
+}
+
+/*
+
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
+
+*/
+.hljs {
+    color: #383a42;
+    background: #fafafa
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: #a0a1a7;
+    font-style: italic
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+    color: #a626a4
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+    color: #e45649
+}
+
+.hljs-literal {
+    color: #0184bb
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+    color: #50a14f
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+    color: #986801
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+    color: #4078f2
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+    color: #c18401
+}
+
+.hljs-emphasis {
+    font-style: italic
+}
+
+.hljs-strong {
+    font-weight: bold
+}
+
+.hljs-link {
+    text-decoration: underline
+}
+
+body.dark {
+    .hljs {
+        background: #2e3440
+    }
+
+    .hljs,
+    .hljs-subst {
+        color: #d8dee9
+    }
+
+    .hljs-selector-tag {
+        color: #81a1c1
+    }
+
+    .hljs-selector-id {
+        color: #8fbcbb;
+        font-weight: 700
+    }
+
+    .hljs-selector-attr,
+    .hljs-selector-class {
+        color: #8fbcbb
+    }
+
+    .hljs-property,
+    .hljs-selector-pseudo {
+        color: #88c0d0
+    }
+
+    .hljs-addition {
+        background-color: rgba(163, 190, 140, .5)
+    }
+
+    .hljs-deletion {
+        background-color: rgba(191, 97, 106, .5)
+    }
+
+    .hljs-built_in,
+    .hljs-class,
+    .hljs-type {
+        color: #8fbcbb
+    }
+
+    .hljs-function,
+    .hljs-function>.hljs-title,
+    .hljs-title.hljs-function {
+        color: #88c0d0
+    }
+
+    .hljs-keyword,
+    .hljs-literal,
+    .hljs-symbol {
+        color: #81a1c1
+    }
+
+    .hljs-number {
+        color: #b48ead
+    }
+
+    .hljs-regexp {
+        color: #ebcb8b
+    }
+
+    .hljs-string {
+        color: #a3be8c
+    }
+
+    .hljs-title {
+        color: #8fbcbb
+    }
+
+    .hljs-params {
+        color: #d8dee9
+    }
+
+    .hljs-bullet {
+        color: #81a1c1
+    }
+
+    .hljs-code {
+        color: #8fbcbb
+    }
+
+    .hljs-emphasis {
+        font-style: italic
+    }
+
+    .hljs-formula {
+        color: #8fbcbb
+    }
+
+    .hljs-strong {
+        font-weight: 700
+    }
+
+    .hljs-link:hover {
+        text-decoration: underline
+    }
+
+    .hljs-comment,
+    .hljs-quote {
+        color: #4c566a
+    }
+
+    .hljs-doctag {
+        color: #8fbcbb
+    }
+
+    .hljs-meta,
+    .hljs-meta .hljs-keyword {
+        color: #5e81ac
+    }
+
+    .hljs-meta .hljs-string {
+        color: #a3be8c
+    }
+
+    .hljs-attr {
+        color: #8fbcbb
+    }
+
+    .hljs-attribute {
+        color: #d8dee9
+    }
+
+    .hljs-name {
+        color: #81a1c1
+    }
+
+    .hljs-section {
+        color: #88c0d0
+    }
+
+    .hljs-tag {
+        color: #81a1c1
+    }
+
+    .hljs-template-variable,
+    .hljs-variable {
+        color: #d8dee9
+    }
+
+    .hljs-template-tag {
+        color: #5e81ac
+    }
+
+    .language-abnf .hljs-attribute {
+        color: #88c0d0
+    }
+
+    .language-abnf .hljs-symbol {
+        color: #ebcb8b
+    }
+
+    .language-apache .hljs-attribute {
+        color: #88c0d0
+    }
+
+    .language-apache .hljs-section {
+        color: #81a1c1
+    }
+
+    .language-arduino .hljs-built_in {
+        color: #88c0d0
+    }
+
+    .language-aspectj .hljs-meta {
+        color: #d08770
+    }
+
+    .language-aspectj>.hljs-title {
+        color: #88c0d0
+    }
+
+    .language-bnf .hljs-attribute {
+        color: #8fbcbb
+    }
+
+    .language-clojure .hljs-name {
+        color: #88c0d0
+    }
+
+    .language-clojure .hljs-symbol {
+        color: #ebcb8b
+    }
+
+    .language-coq .hljs-built_in {
+        color: #88c0d0
+    }
+
+    .language-cpp .hljs-meta .hljs-string {
+        color: #8fbcbb
+    }
+
+    .language-css .hljs-built_in {
+        color: #88c0d0
+    }
+
+    .language-css .hljs-keyword {
+        color: #d08770
+    }
+
+    .language-diff .hljs-meta,
+    .language-ebnf .hljs-attribute {
+        color: #8fbcbb
+    }
+
+    .language-glsl .hljs-built_in {
+        color: #88c0d0
+    }
+
+    .language-groovy .hljs-meta:not(:first-child),
+    .language-haxe .hljs-meta,
+    .language-java .hljs-meta {
+        color: #d08770
+    }
+
+    .language-ldif .hljs-attribute {
+        color: #8fbcbb
+    }
+
+    .language-lisp .hljs-name,
+    .language-lua .hljs-built_in,
+    .language-moonscript .hljs-built_in,
+    .language-nginx .hljs-attribute {
+        color: #88c0d0
+    }
+
+    .language-nginx .hljs-section {
+        color: #5e81ac
+    }
+
+    .language-pf .hljs-built_in,
+    .language-processing .hljs-built_in {
+        color: #88c0d0
+    }
+
+    .language-scss .hljs-keyword,
+    .language-stylus .hljs-keyword {
+        color: #81a1c1
+    }
+
+    .language-swift .hljs-meta {
+        color: #d08770
+    }
+
+    .language-vim .hljs-built_in {
+        color: #88c0d0;
+        font-style: italic
+    }
+
+    .language-yaml .hljs-meta {
+        color: #d08770
+    }
+}
+```
+{{</collapse>}}
+
+### 修改表格样式
+
+参考了 <https://yunpengtai.top/posts/hugo-journey/#%e8%a1%a8%e6%a0%bc>。
+
+PaperMod 主题自带的表格样式不是很好看，笔者对其进行了修改。
+
+效果如下：
+
+<img src="https://s21.ax1x.com/2025/06/26/pVmlX8J.png" alt="表格样式-修改前.png" style="zoom: 50%;" />
+
+*表格样式-修改前*
+
+![表格样式-修改后.png](https://s21.ax1x.com/2025/06/26/pVmlOC4.png)
+
+*表格样式-修改后*
+
+添加 `assets/css/extended/table.css` 文件即可：
+
+{{<collapse summary="table.css">}}
+```css
+table,
+.dark table {
+  border-collapse: collapse;
+  display: table;
+  margin-bottom: 1rem;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  thead th {
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 2px solid var(--code-bg);
+  }
+
+  td,
+  th {
+    text-align: center;
+    vertical-align: middle;
+    border-top: 1px solid var(--code-bg);
+    border-bottom: 1px solid var(--code-bg);
+  }
+
+  tbody tr:hover {
+    background-color: var(--code-bg);
+  }
+
+  tbody tr:nth-of-type(2n + 1) {
+    background-color: var(--code-bg);
+  }
+
+  tr:last-of-type {
+    border-bottom: 2px solid var(--code-bg);
+  }
+}
+```
+{{</collapse>}}
+
+### 侧边悬浮目录
+
+参考了 <https://yunpengtai.top/posts/hugo-journey/#%e4%be%a7%e8%be%b9%e6%82%ac%e6%b5%ae%e7%9b%ae%e5%bd%95>。
 
 ## 功能增强
 
@@ -1276,9 +1758,9 @@ site.Language.Lang "vi" }} {{ $giscusLang = "vi" }} {{ end }}
 
 效果示例：
 
-![en评论区.png](https://s21.ax1x.com/2025/06/25/pVeaUnH.png)
+<img src="https://s21.ax1x.com/2025/06/25/pVeaUnH.png" alt="en评论区.png" />
 *英文界面*
-![ja评论区.png](https://s21.ax1x.com/2025/06/25/pVeaaBd.png)
+<img src="https://s21.ax1x.com/2025/06/25/pVeaaBd.png" alt="ja评论区.png" />
 *日语界面*
 
 通过以上配置，即可在 Hugo 博客中实现评论系统的多语言适配。
@@ -1353,7 +1835,7 @@ int main()
 
 使用也很方便，参考下图：
 
-![折叠块代码.png](https://s21.ax1x.com/2025/06/26/pVejYuV.png)
+<img src="https://s21.ax1x.com/2025/06/26/pVejYuV.png" alt="折叠块代码.png" />
 
 支持两个参数：
 - `summary`：用于设置折叠面板的标题（必填）
