@@ -1,9 +1,9 @@
 +++
-slug = 'test1'
+slug = 'test'
 title = 'Test Post'
 date = 2025-06-04
 lastmod = 2024-11-20T18:00:00+08:00
-draft = false
+draft = true
 categories = ["test"]
 tags = ["test5"]
 +++
