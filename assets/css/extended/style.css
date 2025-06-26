@@ -23,39 +23,3 @@
   padding: 0 0.8em;
   border-radius: 1px var(--radius) var(--radius) 1px;
 }
-
-table,
-.dark table {
-  border-collapse: collapse;
-  display: table;
-  margin-bottom: 1rem;
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-
-  thead th {
-    text-align: center;
-    vertical-align: middle;
-    border-bottom: 2px solid var(--code-bg);
-  }
-
-  td,
-  th {
-    text-align: center;
-    vertical-align: middle;
-    border-top: 1px solid var(--code-bg);
-    border-bottom: 1px solid var(--code-bg);
-  }
-
-  tbody tr:hover {
-    background-color: var(--code-bg);
-  }
-
-  tbody tr:nth-of-type(2n + 1) {
-    background-color: var(--code-bg);
-  }
-
-  tr:last-of-type {
-    border-bottom: 2px solid var(--code-bg);
-  }
-}
