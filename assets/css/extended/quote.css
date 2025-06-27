@@ -1,6 +1,5 @@
 /* 公共样式提取 */
-blockquote.quote,
-blockquote.quote-copyright {
+blockquote.quote{
   position: relative;
   margin: 1em auto;
   padding-left: 2.5em !important;
@@ -22,4 +21,11 @@ blockquote.quote::before{
   font-style: italic;
   line-height: 1;
   color: var(--secondary); /* 可根据主题色设置颜色 */
+}
+
+blockquote.quote footer.blockquote-footer {
+  margin-top: 1rem;
+  font-size: 0.9em;
+  color: var(--secondary);
+  text-align: right;
 }

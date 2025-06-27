@@ -1,8 +1,14 @@
-<blockquote class="quote{{ range .Params }} {{ . }}{{ end }}">
-    {{- $content := .Inner | markdownify -}}
+<blockquote class="quote">
+    {{- $content := .Inner -}}
     {{- if not (strings.HasPrefix $content "<p>") -}}
-        <p>{{ $content }}</p>
+        <p style="white-space: pre-line">{{ .Inner }}</p>
     {{- else -}}
         {{ $content }}
+    {{- end -}}
+
+    {{- with .Get "author" -}}
+        <footer class="blockquote-footer text-right">
+            — {{ . }}
+        </footer>
     {{- end -}}
 </blockquote>
