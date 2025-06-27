@@ -1898,6 +1898,8 @@ fancyBox = true
 
 ### 更优雅的引用
 
+#### 语句引用
+
 参考了 <https://yunpengtai.top/posts/hugo-journey/#blockquote>，并结合自己的需求进行了增强。
 
 在博客中引用名人名言时，使用自定义的 `quote` 短代码让内容更美观。
@@ -1923,6 +1925,8 @@ The slings and arrows of outrageous fortune,
 Or to take Arms against a Sea of troubles,
 And by opposing end them: to die, to sleep
 {{< /quote >}}
+
+**实现方式**
 
 创建短代码模板文件 `layouts/shortcodes/quote.html`，内容如下：
 
@@ -1976,5 +1980,86 @@ blockquote.quote footer.blockquote-footer {
   font-size: 0.9em;
   color: var(--secondary);
   text-align: right;
+}
+```
+
+#### 居中引用
+
+参考了 [荷戟独彷徨 - 自定义 Hugo Shortcodes 简码](https://guanqr.com/tech/website/hugo-shortcodes-customization/#quote-center) 
+
+笔者认为非常适合用来引用诗词。
+
+{{< quote-center >}}
+十里青山远，潮平路带沙
+数声啼鸟怨年华
+又是凄凉时候，在天涯
+白露收残月，清风散晓霞
+绿杨堤畔问荷花
+记得年时沽酒，那人家
+{{< /quote-center >}}
+
+这样使用：
+
+```markdown
+{{</* quote-center */>}}
+十里青山远，潮平路带沙
+数声啼鸟怨年华
+又是凄凉时候，在天涯
+白露收残月，清风散晓霞
+绿杨堤畔问荷花
+记得年时沽酒，那人家
+{{</* /quote-center */>}}
+```
+
+**实现方式**
+
+先加入短代码模板文件 `layouts/shortcodes/quote-center.html` 内容如下：
+
+```html
+<blockquote class="quote-center">
+    {{- $content := .Inner -}}
+    {{- if not (strings.HasPrefix $content "<p>") -}}
+        <p style="white-space: pre-line">{{ .Inner }}</p>
+    {{- else -}}
+        {{ $content }}
+    {{- end -}}
+</blockquote>
+```
+
+再加入 CSS 文件 `assets/css/extended/quote-center.css`，笔者这里使用了 [霞鹜文楷](https://github.com/lxgw/LxgwWenKai) 字体：
+
+```css
+.quote-center {
+    font-family: 'LXGWWenKai', sans-serif !important;
+    position: relative;
+    background: none !important;
+    border-inline-start: 0 !important;
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--code-bg);
+    border-bottom: 1px solid var(--code-bg);
+    p{
+        text-align: center !important;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    &::before {
+        position: absolute;
+        left: 0;
+        content: '“';
+        color: var(--code-bg);
+        font-size: 3em;
+        font-weight: bold;
+        margin-top: -0.25em;
+    }
+    &::after {
+        position: absolute;
+        right: 0;
+        content: '”';
+        color: var(--code-bg);
+        font-size: 3em;
+        font-weight: bold;
+        margin-top: -0.6em;
+    }
 }
 ```
