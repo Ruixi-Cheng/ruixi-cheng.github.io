@@ -1,11 +1,12 @@
 .quote-center {
+    font-family: 'LXGWWenKai', sans-serif !important;
     position: relative;
     background: none !important;
     border-inline-start: 0 !important;
     border-left: none;
     padding-left: 0;
-    border-top: 1px solid var(--color-contrast-lower);
-    border-bottom: 1px solid var(--color-contrast-lower);
+    border-top: 1px solid var(--code-bg);
+    border-bottom: 1px solid var(--code-bg);
     p{
         text-align: center !important;
         margin-top: 1.5em;
@@ -15,18 +16,18 @@
         position: absolute;
         left: 0;
         content: '“';
-        color: var(--color-contrast-low);
+        color: var(--secondary);
         font-size: 3em;
         font-weight: bold;
-        margin-top: -0.42em;
+        margin-top: -0.25em;
     }
     &::after {
         position: absolute;
         right: 0;
         content: '”';
-        color: var(--color-contrast-low);
+        color: var(--secondary);
         font-size: 3em;
         font-weight: bold;
-        margin-top: -0.7em;
+        margin-top: -0.6em;
     }
 }

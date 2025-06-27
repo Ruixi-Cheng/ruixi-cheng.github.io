@@ -1,8 +1,8 @@
 <blockquote class="quote-center">
-    {{- $content := .Inner | markdownify -}}
-    {{- if not (strings.HasPrefix $content "<p>") }}
-        {{ printf `<p>%s</p>` $content | safeHTML }}
-    {{- else }}
-        {{- $content }}
+    {{- $content := .Inner -}}
+    {{- if not (strings.HasPrefix $content "<p>") -}}
+        <p style="white-space: pre-line">{{ .Inner }}</p>
+    {{- else -}}
+        {{ $content }}
     {{- end -}}
-</blockquote> 
+</blockquote>
